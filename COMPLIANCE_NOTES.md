@@ -18,7 +18,7 @@
 5. **Accessibility.** Semantic headings, skip link, focus-visible styles, high-contrast palette, scrollable table region with a caption. A full WCAG 2.2 AA audit hasn't been done.
 6. **Possible offer mismatch.** The HF Space currently offers "free for early teams" dataset audits by email, and this site offers *paid* pilots. Max should make the two consistent before launch.
 
-## Publishing (only after Max explicitly says yes)
+## Publishing (approved by Max on Nov 18, 2026; Option A in use)
 Free GitHub Pages on a personal account needs a **public** repo.
-- Option A, GitHub Pages: `gh repo edit maxmccutcheon59/robolint-site --visibility public --accept-visibility-change-consequences`, then `gh api -X POST repos/maxmccutcheon59/robolint-site/pages -f 'source[branch]=main' -f 'source[path]=/docs'`. Live at https://maxmccutcheon59.github.io/robolint-site/ (matches canonical/OG URLs). Remove the "Preview draft" banner first.
+- Option A, GitHub Pages: `gh repo edit maxmccutcheon59/robolint-site --visibility public --accept-visibility-change-consequences`, then `gh api -X POST repos/maxmccutcheon59/robolint-site/pages -f 'source[branch]=main' -f 'source[path]=/docs'`. Live at https://maxmccutcheon59.github.io/robolint-site/ (matches canonical/OG URLs).
 - Option B, keep the repo private: deploy `docs/` to Cloudflare Pages (free; also supports a `_headers` file for HSTS/frame-ancestors) or Netlify. If you do, update `canonical`, `og:url`, and `og:image` to the new URL.

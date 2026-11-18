@@ -1,8 +1,8 @@
-# robolint-site (PRIVATE PREVIEW, NOT PUBLISHED)
+# robolint-site
 
 Static product site for [robolint](https://github.com/maxmccutcheon59/robolint), the open-source (MIT) quality checker for LeRobot v2/v3 datasets.
 
-**Status:** draft preview. Do not enable GitHub Pages or deploy anywhere until Max McCutcheon explicitly approves.
+**Live:** https://maxmccutcheon59.github.io/robolint-site/ (GitHub Pages from `main` `/docs`).
 
 ## Layout
 - `docs/`: the whole site (plain HTML/CSS, one tiny optional `copy.js` for copy buttons). Relative asset paths, so it works at a GitHub Pages project path (`/robolint-site/`).
@@ -20,5 +20,3 @@ Every number and claim comes from the robolint repo: `README.md`, `AUDIT.md`, `d
 ## Third-party assets
 None. System font stack; favicon, OG image, and CSS are original to this repo. Data in the audit table comes from robolint's AUDIT.md (MIT, © Max McCutcheon).
 
-## Publish (only after Max says yes)
-See "Publishing" in `COMPLIANCE_NOTES.md`.

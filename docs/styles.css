@@ -17,7 +17,6 @@ a:hover{color:#b5ffd8}
 .wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
 code,pre{font-family:var(--mono)}
 :not(pre)>code{background:#1a2430;border:1px solid var(--line);border-radius:6px;padding:1px 6px;font-size:.9em}
-.draft-banner{background:#3a2a12;color:#ffd9a8;text-align:center;font-size:14px;padding:6px 12px;border-bottom:1px solid #5a4220}
 
 /* header */
 .site-header{position:sticky;top:0;z-index:5;background:rgba(11,15,20,.92);border-bottom:1px solid var(--line);backdrop-filter:saturate(1.2) blur(6px)}
