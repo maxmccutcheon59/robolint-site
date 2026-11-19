@@ -104,7 +104,7 @@
       </div>
       <div class="card score-legend">
         <h3>How scoring works</h3>
-        <p>Every episode gets a 0–100 score; the dataset gets a score and a letter grade (A ≥ 90, B ≥ 80, C ≥ 70, D ≥ 60). The dataset score is the average episode score, minus small penalties for dataset-level problems. Roughly: the share of your data you can actually train on.</p>
+        <p>Every episode gets a 0–100 score; the dataset gets a score and a letter grade (A ≥ 90, B ≥ 80, C ≥ 70, D ≥ 60). The dataset score is the average episode score, minus small penalties for dataset-level problems. A heuristic summary: 100 minus penalties per issue, not a measure of usable data.</p>
         <dl>
           <dt class="sev-err">error</dt><dd>Makes an episode unusable for training, so it scores 0.</dd>
           <dt class="sev-warn">warning</dt><dd>Each distinct warning costs 15 points.</dd>
