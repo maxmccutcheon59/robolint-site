@@ -15,7 +15,7 @@ cd docs && python3 -m http.server 8765 --bind 127.0.0.1
 ```
 
 ## Content sources
-Every number and claim comes from the robolint repo: `README.md`, `AUDIT.md`, `datasets.txt`, `pyproject.toml` (version 0.1.0), and `robolint --help`. The terminal sample in the hero is copied verbatim from the robolint README (test dataset with injected faults). No customers, logos, testimonials, or traffic numbers.
+Every number and claim comes from the robolint repo: `README.md`, `AUDIT.md`, `datasets.txt`, `src/robolint/__init__.py` (version 0.1.2), `CHANGELOG.md`, and `robolint --help`. The terminal sample in the hero is copied verbatim from the robolint README (test dataset with injected faults). No customers, logos, testimonials, or traffic numbers.
 
 ## Third-party assets
 None. System font stack; favicon, OG image, and CSS are original to this repo. Data in the audit table comes from robolint's AUDIT.md (MIT, © Max McCutcheon).

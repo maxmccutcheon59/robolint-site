@@ -48,7 +48,7 @@
         <ul class="eyebrow" aria-label="Project facts">
           <li>Open source · MIT</li>
           <li>LeRobot v2.x + v3.x</li>
-          <li>v0.1.0</li>
+          <li>v0.1.2</li>
         </ul>
         <h1>Catch untrainable robot data <span class="hl">before you burn GPU hours</span> on it.</h1>
         <p class="lede">robolint is a quality checker for <a href="https://github.com/huggingface/lerobot" rel="noopener noreferrer" target="_blank">LeRobot</a> datasets, local or on the Hugging Face Hub. Point it at a dataset and find out which episodes will quietly hurt your policy: dead episodes, stacked recordings, dropped frames, teleop glitches, frozen cameras, broken metadata.</p>
@@ -96,7 +96,7 @@
       <p class="section-lede">Supports LeRobot <strong>v2.x</strong> (per-episode files) and <strong>v3.x</strong> (chunked files) layouts.</p>
       <div class="grid g3">
         <article class="card"><span class="tag">01</span><h3>Timing</h3><p>Dropped frames (timestamp gaps), timestamps going backwards, jitter, drift from declared fps, frame_index gaps and duplicates.</p></article>
-        <article class="card"><span class="tag">02</span><h3>Actions &amp; state</h3><p>NaN/inf values, dead episodes (robot never moves), frozen state (follower disconnected), teleop glitches (action spikes), idle lead-in/tail padding, gripper never actuating, joints pinned at limits.</p></article>
+        <article class="card"><span class="tag">02</span><h3>Actions &amp; state</h3><p>NaN/inf values, dead episodes (robot never moves), frozen state (follower disconnected), teleop glitches (action spikes), idle lead-in/tail padding, gripper never actuating, joints pinned at limits. New in 0.1.2: missed grasps (<code>FAILED_GRASP</code>, <code>REGRASP</code>), where the gripper closes fully on nothing in a dataset whose grasps normally stop on an object. Recall on real failed demos is not yet measured, and only gripper dimensions named &ldquo;gripper&rdquo; are checked.</p></article>
         <article class="card"><span class="tag">03</span><h3>Episodes</h3><p>False starts, truncated and runaway episodes, metadata/data length mismatches, near-duplicate episodes, missing or unknown tasks.</p></article>
         <article class="card"><span class="tag">04 · <code>--videos</code></span><h3>Video</h3><p>Missing or unreadable files, video/action length mismatches, black, blown-out, blank and frozen camera feeds, fps and resolution mismatches.</p></article>
         <article class="card"><span class="tag">05</span><h3>Metadata</h3><p>Declared vs actual episode/frame counts, missing features, shape mismatches, vague task descriptions that can't condition a VLA policy.</p></article>
@@ -132,7 +132,7 @@
 
       <div class="table-wrap" tabindex="0" role="region" aria-labelledby="results-cap">
         <table>
-          <caption id="results-cap">Results for all 18 datasets, lowest score first. An <strong>error</strong> means the episode is unusable for training as published. Scroll sideways on small screens.</caption>
+          <caption id="results-cap">Results for all 18 datasets, lowest score first, from AUDIT.md. An <strong>error</strong> means the episode is unusable for training as published. With robolint 0.1.2 two scores shift slightly (EPITECH-LILLE/eval_training 35.0, kmg0620/so101_bomb_pick_place_v1 55.2; both still F); all others are unchanged. Scroll sideways on small screens.</caption>
           <thead><tr><th scope="col">Dataset</th><th scope="col">Type</th><th scope="col" class="num">Episodes</th><th scope="col">Score</th><th scope="col" class="num">Episodes with errors</th><th scope="col">Main issues</th></tr></thead>
           <tbody>
           <!-- ROWS:START -->
